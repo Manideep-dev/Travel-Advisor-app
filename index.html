@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Advisor App</title>
+    <script type="module">
+      // Dynamically create script element
+      const script = document.createElement('script');
+      // Set the source URL with the Google Maps API key from Vite.js environment variable
+      script.src = `https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY}`;
+      // Append the script element to the head of the document
+      document.head.appendChild(script);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
